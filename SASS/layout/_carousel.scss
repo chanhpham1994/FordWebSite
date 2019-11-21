@@ -1,0 +1,64 @@
+.carousel{
+    background-image: url('../../IMG/carousel-picture.webp');
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .carousel--content{
+        padding-top: 15px;
+        padding-left: 15px;
+       color: $color-white-0;
+       h2{
+        font-size: $fs-4;
+        font-weight: $fw-bold-1;
+       } 
+       button{
+            @include button($color-white-0,$color-white-0,$pd-2,$pd-3 + 75);
+            a{
+                color:$color-blue-1;
+                font-weight: $fw-bold-0;
+                text-decoration: none;
+            }
+        &:hover{
+            @include button($color-blue-0,$color-white-0,$pd-2,$pd-3 + 75);
+            a{
+                color:$color-white-1;
+                font-weight: $fw-bold-0;
+                text-decoration: none;
+            }
+        }    
+       }
+    }
+}
+
+.sup--carousel{
+    display: none;
+}
+
+//Media screen
+@media (min-width: 768px) and (max-width: 900px){
+    .sup--carousel{
+        display: none;
+    } 
+}
+@media (max-width: 767px){
+    .carousel{
+        height: 400px;
+        text-align: center;
+        .carousel--content{
+            h2{
+                font-size: 35px;
+            }
+        }
+    }
+
+    .sup--carousel{
+        display: block;
+        img{
+            width: 100%;
+        }
+   
+
+    }
+    
+}

@@ -1,0 +1,228 @@
+.brand{
+    .brand--content{
+        .brand--content__head{
+            color: $color-white-0;
+            background-image: url('../../IMG/brand1.webp');
+            height: 200px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            h1{
+                margin-bottom: $mg-3 + 20;
+            }
+        }
+
+        .brand--content__middle{
+            color: $color-white-0;
+            background-image: url('../../IMG/brand2.webp');
+            height: 600px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            h1{
+                margin-bottom: $mg-2;
+                letter-spacing: 2px;
+            }
+            button{
+                @include button($color-blue-0,$color-blue-0,$pd-2,$pd-3 + 75);
+                    a{
+                        color: $color-white-0;
+                        font-weight: $fw-bold-0;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        border: 1px solid $color-black-0;
+                    }
+               }
+              
+        }
+
+        .brand--content__bottom{
+            display: grid;
+            // grid-template-columns: repeat(4,1fr);
+            grid-template-columns: 25% 25% 25% 25%;
+
+            .one{
+                grid-column: 1/span 3; 
+                p{
+                    color: $color-gray-0;
+                    font-weight: $fw-bold-1;
+                }
+            }
+            .two{
+                grid-column: 4/ span 1;
+                position: relative;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .three{
+                position: relative;
+                grid-column: 1/span 2;
+                grid-row: 2/span 2;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .four{
+                position: relative;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .five{
+                position: relative;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .six{
+                position: relative;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .seven{
+                position: relative;
+                .text{
+                    @include text($color-blue-2,50px);
+                }
+                overflow: hidden;
+                cursor: pointer;
+            }
+            img{
+                width: 100%;
+                display: block;
+                transition: all 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .view-all{
+                display:none;
+            }
+           
+        }
+
+        .brand--content__recall{
+                color: $color-red-0;
+                font-weight: $fw-normal;
+                background-color: $color-white-1;
+                height: 200px;
+                h1{
+                    margin-bottom:$mg-2;
+                    letter-spacing: 2px;
+                }
+                button{
+                    @include button($color-red-0,$color-white-0,$pd-2,$pd-3 + 75);
+                        a{
+                            color: $color-white-0;
+                            font-weight: $fw-bold-0;
+                            text-decoration: none;
+                        }
+                   }
+        }
+
+        .disclosures{
+            padding: 20px 0;
+            cursor: pointer;
+            span{
+                margin-right: 10px;
+                color: $color-blue-1;
+                &:hover{
+                    color:$color-black-0;
+                }
+            }
+        }
+        
+        #pannel{
+            height: 300px;
+            padding: 50px;
+            display: none;
+            overflow: scroll;
+            background-color: $color-white-1;
+        }
+    }    
+}
+
+//Khai báo class thay đổi icon DISCLOSURES
+.toggleicon{
+    transform: rotate(180deg);
+}
+
+//Media screen
+@media (max-width:767px){
+    .brand{
+        .brand--content{
+            .brand--content__head{
+                height: 400px;
+            }
+            .brand--content__middle{
+                height: 400px;
+            }
+            .brand--content__bottom{
+                display: block;
+                .one{
+                    h2{
+                        padding: 30px 0;
+                    }
+                    p{
+                       display: none;
+                    }
+                }
+                .two{
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .three{
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .four{
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .five{
+                    display: none;
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .six{
+                    display: none;
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .seven{
+                    display: none;
+                    .text{
+                        @include text($color-blue-2,70px);
+                    }
+                }
+                .view-all{
+                    display: block;
+                    background-color: $color-blue-0;
+                    color: $color-white-0;
+                    font-size: $fs-2;
+                    cursor: pointer;
+                }
+            }
+        }
+       
+    }
+}
